@@ -23,7 +23,7 @@
                 <!-- main header -->
                 <h1>Today I Learned</h1>
             </div>
-            <button>Share a fact</button>
+            <button class="btn ">Share a fact</button>
         </header>
 
         <!-- form for the input of facts as well as their sources -->
@@ -37,21 +37,29 @@
                 <option value="science">Science</option>
                 <option value="finance">Finance</option>
             </select>
-            <button>POST</button>
+            <button class="btn btn-large">Post</button>
         </form>
         
         <main class="main">
             <!-- list containing the buttons to filter -->
             <aside>
                 <ul>
-                    <li>
-                        <button>All</button>
+                    <li class="category">
+                        <button class="btn btn-all-categories">All</button>
                     </li>
-                    <li>
-                        <button>Technology</button>
+                    <li class="category">
+                        <button 
+                            class="btn btn-category"
+                            style="background-color: #3b82f6">
+                            Technology
+                        </button>
                     </li>
-                    <li>
-                        <button>Science</button>
+                    <li class="category">
+                        <button 
+                            class="btn btn-category"
+                            style="background-color: #16a34a">
+                            Science
+                        </button>
                     </li>
                 </ul>
             </aside>
@@ -62,8 +70,11 @@
                     <li class="fact">
                         <p>
                             React is being developed by Meta (formerly facebook) 
-                            <a href="https://opensource.fb.com/"
-                            target="_blank">(Source)</a>
+                            <a 
+                                class="source"
+                                href="https://opensource.fb.com/"
+                                target="_blank">(Source)
+                            </a>
                         </p>
                         <span class="tag"
                         style="background-color: #3b82f6">
@@ -80,8 +91,11 @@
                             Millennial dads spend 3 times as much time with their kids than 
                             their fathers spent with them. In 1982, 43% of fathers had 
                             never changed a diaper. Today, that number is down to 3%
-                            <a href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
-                            target="_blank">(Source)</a>
+                            <a 
+                                class="source"
+                                href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
+                                target="_blank">(Source)
+                            </a>
                         </p>
                         <span class="tag"
                         style="background-color: #eab308">
