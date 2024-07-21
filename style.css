@@ -5,15 +5,19 @@
     box-sizing: border-box;
 }
 
-/* attributes of the body section */
 body {
     background-color: #292524;
     color: #fafaf9;
     font-family: "Sono", sans-serif;
-    padding: 40px;
+    padding: 48px 64px;
 }
 
-/* attributes of the header */
+/* MAIN LAYOUT */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
 .header {
     margin-bottom: 40px;
     display: flex;
@@ -21,13 +25,6 @@ body {
     justify-content: space-between;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-/* attributes of the form */
 .fact-form{
     background-color: #44403c;
     margin-bottom: 40px;
@@ -35,7 +32,24 @@ body {
     text-align: center;
 }
 
-/* attributes of the title */
+.main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 48px;
+}
+
+/* ELEMENTS  */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo img {
+    width: 68px;
+    height: 68px;
+}
+
 h1 {
     font-size: 42px;
     text-transform: uppercase;
@@ -46,7 +60,6 @@ h1 {
     
 }
 
-/* attributes of the facts */
 .fact {
     font-size: 20px;
     line-height: 1.4;
@@ -61,7 +74,6 @@ h1 {
     gap: 24px;
 }
 
-/* attributes of the tags of the fact */
 .tag {
     text-transform: uppercase;
     font-size: 14px;
@@ -74,10 +86,9 @@ h1 {
 }
 
 .vote-buttons {
-    margin-left: 20px;
+    margin-left: auto;
 }
 
-/* attributes of the list */
 ul {
     list-style: none;
 }
