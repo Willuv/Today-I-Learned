@@ -1,35 +1,63 @@
+/* global specific attributes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* attributes of the body section */
 body {
     background-color: #292524;
+    color: #fafaf9;
+    font-family: "Sono", sans-serif;
+    padding: 40px;
 }
 
+/* attributes of the header */
+.header {
+    margin-bottom: 40px;
+}
+
+
+/* attributes of the form */
 .fact-form{
     background-color: #44403c;
+    margin-bottom: 40px;
+    padding: 16px 40px;
+    text-align: center;
 }
 
+/* attributes of the title */
 h1 {
     font-size: 42px;
     text-transform: uppercase;
-    text-align: center;
     font-family: "Coiny", sans-serif;
     color: #fafaf9;
 }
 
+/* attributes of the facts */
 .fact {
     font-size: 20px;
     line-height: 1.4;
-    font-family: "Sono", sans-serif;
     color: #fafaf9;
     background-color: #44403c;
+    margin-bottom: 16px;
+    padding: 16px 24px;
 }
 
+/* attributes of the tags of the fact */
 .tag {
     text-transform: uppercase;
     font-size: 14px;
     font-family: "Coiny", sans-serif;
     color: #fafaf9;
     background-color: #44403c;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+/* attributes of the list */
 ul {
     list-style: none;
 }
