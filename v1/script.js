@@ -9,7 +9,6 @@ const CATEGORIES = [
     { name: "news", color: "#8b5cf6" },
 ];
 
-
 // selecting DOM elements
 const btn = document.querySelector('.btn-open');
 const form = document.querySelector('.fact-form');
@@ -20,7 +19,6 @@ factsList.innerHTML = "";
 
 // load data from Supabase
 loadFacts();
-
 async function loadFacts() {
     const res = await fetch('https://hahltkosgrmnafwikwkl.supabase.co/rest/v1/facts', {
         headers: {
