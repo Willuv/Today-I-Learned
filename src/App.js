@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import supabase from './supabase'
+
 import './style.css';
 import { isValidInputTimeValue } from "@testing-library/user-event/dist/utils";
 
@@ -44,7 +46,15 @@ const initialFacts = [
 // main component of the web page
 function App() {
   const [showForm, setShowForm] = useState(false);
-  const [facts, setFacts] = useState(initialFacts);
+  const [facts, setFacts] = useState([]);
+
+  useEffect(function() {
+    async function getFacts() {
+      const { data: facts, error } = await supabase.from('facts').select('*');
+      setFacts(facts);
+    }
+    getFacts();
+  }, []);
 
   return (
     <>
@@ -209,7 +219,7 @@ function Fact({ fact }){
             </a>
         </p>
         <span className="tag" style={{
-        backgroundColor: CATEGORIES.find((cat) => cat.name === fact.category).color}}>
+          backgroundColor: CATEGORIES.find((cat) => cat.name === fact.category)?.color,}}>
           {fact.category}</span>
         {/* reaction buttons */}
         <div className="vote-buttons">
