@@ -1,5 +1,5 @@
-// connect to the style.css file
-import './style.css'
+import { useState } from "react";
+import './style.css';
 
 const initialFacts = [
   {
@@ -42,6 +42,10 @@ const initialFacts = [
 
 // main component of the web page
 function App() {
+  // 1. define state var
+  const [showForm, setShowForm] = useState(false);
+
+  const appTitle = "Today I Learned";
   return (
     <>
       {/* HEADER */}
@@ -50,12 +54,14 @@ function App() {
           {/* main logo of the website */}
           <img src="logo.png" height="68" width="68" alt="Today I Learned Logo"/>
           {/* main header */}
-          <h1>Today I Learned</h1>
+          <h1>{appTitle}</h1>
         </div>
-      <button className="btn btn-large btn-open">Share a fact</button>
+      <button className="btn btn-large btn-open" 
+      // 3. update state var
+      onClick={()=>setShowForm((show) => !show)}>Share a fact</button>
     </header>
-    
-    <NewFactForm />
+    {/* 2. use state var */}
+    {showForm ? <NewFactForm /> : null}
 
     <main class="main">
       <CategoryFilter />
